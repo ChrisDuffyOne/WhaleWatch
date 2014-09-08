@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Washington Whale Museum Report</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="searchArea">
+			<img src="images/logo.png" alt="Whale Watch" class="logoHead">
+
+			<div class="speciesSelect">
+				<h2>Species</h2>
+			</div>
+			<form id="speciesType">
+				<input type="radio" name="species" class="species" value="orca"><span class="answer">Orca</span><br>
+				<input type="radio" name="species" class="species" value="minke"><span class="answer">Minke</span><br>
+				<input type="radio" name="species" class="species" value="gray whale"><span class="answer">Gray Whale</span><br>
+				<input type="radio" name="species" class="species" value="humpback"><span class="answer">Humpback</span><br>
+			</form>
+
+			<div class="locationSelect">
+				<h2>Location</h2>
+			</div>
+			<form id="locationType">
+				<input type="radio" name="location" class="option" value="48.5159,-123.1524"><span class="answer">Lime Kiln Lighthouse WA</span><br>
+				<input type="radio" name="location" class="option" value="46.9674,-123.8521"><span class="answer">Aberdeen WA</span><br>
+				<input type="radio" name="location" class="option" value="46.1878,-123.8312"><span class="answer">Astoria WA</span><br>
+				<input type="radio" name="location" class="option" value="43.3513,-124.3131"><span class="answer">Bayview OR</span><br>
+			</form>
+
+			<div class="radiusSelect">
+				<h2>Search Radius</h2>
+			</div>
+			<form id="radiusType">
+				<input type="radio" name="radius" class="option" value=".5"><span class="answer">.5 Miles</span><br>
+				<input type="radio" name="radius" class="option" value="1"><span class="answer">1 Mile</span><br>
+				<input type="radio" name="radius" class="option" value="10"><span class="answer">10 Miles</span><br>
+				<input type="radio" name="radius" class="option" value="20"><span class="answer">20 Miles</span><br>
+			</form>
+			
+			<form class="submitButton" onsubmit="return false;">
+				<input type="submit" value="Submit" id="submitButton">
+			</form>
+
+			<div id="results">
+				<!-- EXAMPLE ANSWER BLOCK
+					<div class="result">
+						<span class="resultLabel">Species: </span><span class="info">Info info info</span><br />
+						<span class="resultLabel">Quanity: </span><span class="info">Info info info</span><br />
+						<span class="resultLabel"><p>Description: </p></span><span class="info">Info info info</span><br />
+						<span class="resultLabel">Location: </span><span class="info">Info info info</span><br />
+					</div>
+				-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
