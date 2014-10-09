@@ -56,7 +56,6 @@ $(document).ready( function() {
 	    $('html,body').animate({
 	        scrollTop: $("#results").offset().top},
 	        'slow');
-	    alert('I fucking work');
 	});
 	
 });	
