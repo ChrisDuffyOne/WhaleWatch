@@ -1,5 +1,11 @@
 $(document).ready( function() {
 
+//WARNING FEATURE
+	$('.warning').on("click", "#okButton", function (event) {
+		//$('.warning').fadeOut();
+		$('.warning').slideUp();
+	});
+
 //SELECT FEATURE
 	$('.searchArea').on("click", ".speciesSelect", function (event) {
 		$('#speciesType').slideToggle();
@@ -45,6 +51,12 @@ $(document).ready( function() {
 		});
 	});
 
-
-
+//SCROLLTOP RESULTS 
+	$("#submitButton").click(function() {
+	    $('html,body').animate({
+	        scrollTop: $("#results").offset().top},
+	        'slow');
+	    alert('I fucking work');
+	});
+	
 });	
