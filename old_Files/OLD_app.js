@@ -20,8 +20,8 @@ $(document).ready( function() {
 	});
 
 
-
-//SELECTION HIGHLIGHT
+//WIP
+//ALTERNATIVE TO RADIO BUTTONS
 	//speciesSelect
 	$('#speciesType').on("click", ".answer", function (event) {
 		$('#speciesType .answer').removeClass('answerSelect')
@@ -45,19 +45,28 @@ $(document).ready( function() {
 	$('.submitButton').submit( function(event){
 		// Clears the previous results
 		$('#results').empty();
-		
 		// Sets the Variables for species and location
-		//testSpecies=$('#speciesType span.answerSelect').html();
-		testSpecies=$('#speciesType span.answerSelect').data('species');
+		animal = $("input[type='radio']:checked", '#speciesType').val();
+		waterPlace = $("input[type='radio']:checked", '#locationType').val();
+		distancePlace = $("input[type='radio']:checked", '#radiusType').val();
+
+
+		//////WIP//////
+		//Radio Button Alternative
+		//var test=$('span#test').html()
+		//testAnswer=$('span.answerSelect').html();
+		testSpecies=$('#speciesType span.answerSelect').html();
 		testLocation=$('#locationType span.answerSelect').data('coordinates');
 		testRadius=$('#radiusType span.answerSelect').data('radius');
-		
+		console.log(testSpecies);
+		console.log(testLocation);
+		console.log(testRadius);
+		//Radio Button Alternative
 
 		$.ajax({
 			type: "GET",
 			crossDomain: true,
-			//url: "http://hotline.whalemuseum.org/api.json?species="+animal+"&near="+waterPlace+"&radius="+distancePlace+"&limit=100&until=yesterday",
-			url: "http://hotline.whalemuseum.org/api.json?species="+testSpecies+"&near="+testLocation+"&radius="+testRadius+"&limit=100&until=yesterday",
+			url: "http://hotline.whalemuseum.org/api.json?species="+animal+"&near="+waterPlace+"&radius="+distancePlace+"&limit=100&until=yesterday",
 			contentType: "application/javascript; charset=utf-8",
 			dataType: "jsonp",
 			async: false,

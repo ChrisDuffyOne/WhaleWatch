@@ -26,30 +26,30 @@
 				<h2>Species</h2>
 			</div>
 			<form id="speciesType">
-				<span class="answer" data-species="orca">Orca</span><br>
-				<span class="answer" data-species="minke">Minke</span><br>
-				<span class="answer" data-species="gray whale">Gray Whale</span><br>
-				<span class="answer" data-species="humpback">Humpback</span><br>
+				<input type="radio" name="species" class="species" value="orca"><span class="answer">Orca</span><br>
+				<input type="radio" name="species" class="species" value="minke"><span class="answer">Minke</span><br>
+				<input type="radio" name="species" class="species" value="gray whale"><span class="answer">Gray Whale</span><br>
+				<input type="radio" name="species" class="species" value="humpback"><span class="answer">Humpback</span><br>
 			</form>
 
 			<div class="locationSelect">
 				<h2>Location</h2>
 			</div>
 			<form id="locationType">
-				<span class="answer" data-coordinates="48.5159,-123.1524">Lime Kiln Lighthouse WA</span><br>
-				<span class="answer" data-coordinates="46.9674,-123.8521">Aberdeen WA</span><br>
-				<span class="answer" data-coordinates="46.1878,-123.8312">Astoria WA</span><br>
-				<span class="answer" data-coordinates="43.3513,-124.3131">Bayview OR</span><br>
+				<input type="radio" name="location" class="option" value="48.5159,-123.1524"><span class="answer" data-coordinates="48.5159,-123.1524">Lime Kiln Lighthouse WA</span><br>
+				<input type="radio" name="location" class="option" value="46.9674,-123.8521"><span class="answer" data-coordinates="46.9674,-123.8521">Aberdeen WA</span><br>
+				<input type="radio" name="location" class="option" value="46.1878,-123.8312"><span class="answer" data-coordinates="46.1878,-123.8312">Astoria WA</span><br>
+				<input type="radio" name="location" class="option" value="43.3513,-124.3131"><span class="answer" data-coordinates="43.3513,-124.3131">Bayview OR</span><br>
 			</form>
 
 			<div class="radiusSelect">
 				<h2>Search Radius</h2>
 			</div>
 			<form id="radiusType">
-				<span class="answer" data-radius=".5">.5 Miles</span><br>
-				<span class="answer" data-radius="1">1 Mile</span><br>
-				<span class="answer" data-radius="10">10 Miles</span><br>
-				<span class="answer" data-radius="20">20 Miles</span><br>
+				<input type="radio" name="radius" class="option" value=".5"><span class="answer" data-radius=".5">.5 Miles</span><br>
+				<input type="radio" name="radius" class="option" value="1"><span class="answer" data-radius="1">1 Mile</span><br>
+				<input type="radio" name="radius" class="option" value="10"><span class="answer" data-radius="10">10 Miles</span><br>
+				<input type="radio" name="radius" class="option" value="20"><span class="answer" data-radius="20">20 Miles</span><br>
 			</form>
 			
 			<form class="submitButton" onsubmit="return false;">

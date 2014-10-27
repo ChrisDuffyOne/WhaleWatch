@@ -108,20 +108,28 @@ table {
 }
 
 #speciesType{
+	margin-top: .5em;
 	display: none;
 }
 
 #locationType{
+	margin-top: .5em;
 	display: none;
 }
 
 #radiusType{
+	margin-top: .5em;
 	display: none;
 }
 
 .option{
 	background-color: blue;
 	font-size: 1.25em;
+}
+
+.answerSelect{
+	background-color: #73CAC4;
+	color: white;
 }
 
 #submitButton{
@@ -180,12 +188,44 @@ table {
 		border-bottom-width: .125em;
 	}
 
+	#okButton{
+		margin-top: 1em;
+		min-height: 75px;
+		min-width: 300px;
+		font-size: 1.25em;
+	}
+
 	body{
 		background-color: #005E8C;
 	}
 
+	.speciesSelect{
+		font-size: 4.75em;
+	}
+
+	.locationSelect{
+		font-size: 4.75em;
+	}
+
+	.radiusSelect{
+		font-size: 4.75em;
+	}
+
+	.answer{
+		font-size: 3em;
+	}
+
+	.species{
+		min-height: 2.5em;
+	}
+
 	.searchArea{
 		width: 95%;
+	}
+
+	#submitButton{
+		min-height: 80px;
+		font-size: 2em;
 	}
 }
 
