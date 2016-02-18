@@ -1,10 +1,11 @@
 $(document).ready( function() {
 
-//WARNING FEATURE
-	$('.warning').on("click", "#okButton", function (event) {
-		//$('.warning').fadeOut();
-		$('.warning').slideUp();
-	});
+//CHROME WARNING
+	var isChrome = !!window.chrome && !!window.chrome.webstore;
+	if(isChrome === true){
+		$('.chromeWarning').show();
+		$('.searchArea').hide();
+	};
 
 //SELECT FEATURE
 	$('.searchArea').on("click", ".speciesSelect", function (event) {
@@ -47,7 +48,6 @@ $(document).ready( function() {
 		$('#results').empty();
 		
 		// Sets the Variables for species and location
-		//testSpecies=$('#speciesType span.answerSelect').html();
 		testSpecies=$('#speciesType span.answerSelect').data('species');
 		testLocation=$('#locationType span.answerSelect').data('coordinates');
 		testRadius=$('#radiusType span.answerSelect').data('radius');
@@ -56,7 +56,6 @@ $(document).ready( function() {
 		$.ajax({
 			type: "GET",
 			crossDomain: true,
-			//url: "http://hotline.whalemuseum.org/api.json?species="+animal+"&near="+waterPlace+"&radius="+distancePlace+"&limit=100&until=yesterday",
 			url: "http://hotline.whalemuseum.org/api.json?species="+testSpecies+"&near="+testLocation+"&radius="+testRadius+"&limit=100&until=yesterday",
 			contentType: "application/javascript; charset=utf-8",
 			dataType: "jsonp",

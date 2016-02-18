@@ -49,11 +49,36 @@ table {
 
 /* /////// MY CSS ///////  */
 
+/* CHROME BROWSER WARNING */
+.chromeWarning{
+	background-color:purple;
+	width:100%;
+	height:100vh;
+	display: block;
+	z-index: 1000;
+	position:absolute;
+	font-family: Tahoma;
+	background-color: #2B83A5;
+	color: white;
+	display: none;
+}
+.chromeWarningContent{
+	text-align: center;
+	margin-top: 150px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.chromeWarningContent h1{
+	font-size: 2em;
+	margin-top: 10px;
+}
+.chromeWarningContent img{
+	max-width: 300px;
+}
 /* UNIVERSAL CSS */
 .container{
 		width: 100%;
 }
-
 .searchArea{
 	background-color: #005E8C;
 	margin-left: auto;
